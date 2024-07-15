@@ -69,7 +69,7 @@ const Index = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8 text-primary text-center bg-secondary/20 py-4 rounded-lg shadow-md">
+      <h1 className="title">
         Swedish Hacker News Top Stories
       </h1>
       <Input

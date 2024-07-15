@@ -155,3 +155,8 @@
   --input: 210 100% 25%;
   --ring: var(--swedish-yellow);
 }
+
+/* New styles for improved title contrast */
+.title {
+  @apply text-4xl font-bold mb-8 text-yellow-300 text-center bg-blue-900 py-4 rounded-lg shadow-md;
+}
