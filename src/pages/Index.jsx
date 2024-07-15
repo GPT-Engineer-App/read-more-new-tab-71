@@ -16,9 +16,9 @@ const fetchStory = async (id) => {
 };
 
 const StoryItem = ({ story }) => (
-  <Card className="mb-4 hover:shadow-lg transition-shadow duration-300">
+  <Card className="mb-4 hover:shadow-lg transition-shadow duration-300 bg-card text-card-foreground">
     <CardHeader className="bg-primary/10">
-      <CardTitle className="text-lg text-primary">{story.title}</CardTitle>
+      <CardTitle className="text-lg text-primary-foreground">{story.title}</CardTitle>
     </CardHeader>
     <CardContent className="pt-4">
       <p className="text-sm text-muted-foreground mb-2">Upvotes: {story.score}</p>
@@ -26,7 +26,7 @@ const StoryItem = ({ story }) => (
         href={story.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-secondary hover:underline font-medium"
+        className="text-accent hover:underline font-medium"
       >
         Read more
       </a>
@@ -35,13 +35,13 @@ const StoryItem = ({ story }) => (
 );
 
 const SkeletonStory = () => (
-  <Card className="mb-4">
+  <Card className="mb-4 bg-card">
     <CardHeader>
-      <Skeleton className="h-6 w-[250px]" />
+      <Skeleton className="h-6 w-[250px] bg-muted" />
     </CardHeader>
     <CardContent>
-      <Skeleton className="h-4 w-[100px] mb-2" />
-      <Skeleton className="h-4 w-[80px]" />
+      <Skeleton className="h-4 w-[100px] mb-2 bg-muted" />
+      <Skeleton className="h-4 w-[80px] bg-muted" />
     </CardContent>
   </Card>
 );
@@ -69,13 +69,13 @@ const Index = () => {
 
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-4xl font-bold mb-8 text-primary text-center">Hacker News Top Stories</h1>
+      <h1 className="text-4xl font-bold mb-8 text-primary text-center">Swedish Hacker News Top Stories</h1>
       <Input
         type="text"
         placeholder="Search stories..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="mb-8 shadow-sm"
+        className="mb-8 shadow-sm bg-input text-input-foreground"
       />
       {isLoadingIds || isLoadingStories ? (
         Array(10).fill().map((_, index) => <SkeletonStory key={index} />)

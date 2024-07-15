@@ -97,3 +97,61 @@
 .input {
   @apply border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary;
 }
+
+/* Swedish theme */
+:root {
+  --swedish-blue: 210 100% 30%;
+  --swedish-yellow: 47 100% 50%;
+  
+  --background: var(--swedish-blue);
+  --foreground: 0 0% 100%;
+  
+  --card: 210 100% 35%;
+  --card-foreground: 0 0% 100%;
+  
+  --primary: var(--swedish-yellow);
+  --primary-foreground: 210 100% 30%;
+  
+  --secondary: var(--swedish-blue);
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 210 100% 40%;
+  --muted-foreground: 0 0% 90%;
+  
+  --accent: var(--swedish-yellow);
+  --accent-foreground: 210 100% 30%;
+  
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 210 100% 40%;
+  --input: 210 100% 40%;
+  --ring: var(--swedish-yellow);
+}
+
+.dark {
+  --background: 210 100% 15%;
+  --foreground: 0 0% 100%;
+  
+  --card: 210 100% 20%;
+  --card-foreground: 0 0% 100%;
+  
+  --primary: var(--swedish-yellow);
+  --primary-foreground: 210 100% 15%;
+  
+  --secondary: 210 100% 25%;
+  --secondary-foreground: 0 0% 100%;
+  
+  --muted: 210 100% 25%;
+  --muted-foreground: 0 0% 80%;
+  
+  --accent: var(--swedish-yellow);
+  --accent-foreground: 210 100% 15%;
+  
+  --destructive: 0 100% 40%;
+  --destructive-foreground: 0 0% 100%;
+  
+  --border: 210 100% 25%;
+  --input: 210 100% 25%;
+  --ring: var(--swedish-yellow);
+}
