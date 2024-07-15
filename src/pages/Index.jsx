@@ -16,17 +16,17 @@ const fetchStory = async (id) => {
 };
 
 const StoryItem = ({ story }) => (
-  <Card className="mb-4">
-    <CardHeader>
-      <CardTitle className="text-lg">{story.title}</CardTitle>
+  <Card className="mb-4 hover:shadow-lg transition-shadow duration-300">
+    <CardHeader className="bg-primary/10">
+      <CardTitle className="text-lg text-primary">{story.title}</CardTitle>
     </CardHeader>
-    <CardContent>
-      <p className="text-sm text-gray-500">Upvotes: {story.score}</p>
+    <CardContent className="pt-4">
+      <p className="text-sm text-muted-foreground mb-2">Upvotes: {story.score}</p>
       <a
         href={story.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-blue-500 hover:underline"
+        className="text-secondary hover:underline font-medium"
       >
         Read more
       </a>
@@ -37,7 +37,7 @@ const StoryItem = ({ story }) => (
 const SkeletonStory = () => (
   <Card className="mb-4">
     <CardHeader>
-      <Skeleton className="h-4 w-[250px]" />
+      <Skeleton className="h-6 w-[250px]" />
     </CardHeader>
     <CardContent>
       <Skeleton className="h-4 w-[100px] mb-2" />
@@ -68,14 +68,14 @@ const Index = () => {
   );
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-6">Hacker News Top Stories</h1>
+    <div className="container mx-auto px-4 py-8 max-w-4xl">
+      <h1 className="text-4xl font-bold mb-8 text-primary text-center">Hacker News Top Stories</h1>
       <Input
         type="text"
         placeholder="Search stories..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="mb-6"
+        className="mb-8 shadow-sm"
       />
       {isLoadingIds || isLoadingStories ? (
         Array(10).fill().map((_, index) => <SkeletonStory key={index} />)
