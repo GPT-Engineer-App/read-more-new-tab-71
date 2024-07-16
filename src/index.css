@@ -6,7 +6,7 @@
  
 @layer base {
   :root {
-    --background: 210 100% 98%;
+    --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
 
     --card: 0 0% 100%;
@@ -15,10 +15,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
  
-    --primary: 210 100% 50%;
+    --primary: 0 72% 51%;
     --primary-foreground: 210 40% 98%;
  
-    --secondary: 47 100% 50%;
+    --secondary: 210 100% 50%;
     --secondary-foreground: 222.2 47.4% 11.2%;
  
     --muted: 210 40% 96.1%;
@@ -47,10 +47,10 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
  
-    --primary: 210 100% 50%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 0 72% 51%;
+    --primary-foreground: 210 40% 98%;
  
-    --secondary: 47 100% 50%;
+    --secondary: 210 100% 50%;
     --secondary-foreground: 210 40% 98%;
  
     --muted: 217.2 32.6% 17.5%;
@@ -98,65 +98,66 @@
   @apply border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-primary;
 }
 
-/* Swedish theme */
+/* British theme */
 :root {
-  --swedish-blue: 210 100% 30%;
-  --swedish-yellow: 47 100% 50%;
+  --british-red: 0 72% 51%;
+  --british-blue: 210 100% 50%;
+  --british-white: 0 0% 100%;
   
-  --background: var(--swedish-blue);
-  --foreground: 0 0% 100%;
+  --background: var(--british-white);
+  --foreground: var(--british-blue);
   
-  --card: 210 100% 35%;
-  --card-foreground: 0 0% 100%;
+  --card: var(--british-white);
+  --card-foreground: var(--british-blue);
   
-  --primary: var(--swedish-yellow);
-  --primary-foreground: 210 100% 30%;
+  --primary: var(--british-red);
+  --primary-foreground: var(--british-white);
   
-  --secondary: var(--swedish-blue);
-  --secondary-foreground: 0 0% 100%;
+  --secondary: var(--british-blue);
+  --secondary-foreground: var(--british-white);
   
-  --muted: 210 100% 40%;
-  --muted-foreground: 0 0% 90%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
   
-  --accent: var(--swedish-yellow);
-  --accent-foreground: 210 100% 30%;
+  --accent: var(--british-red);
+  --accent-foreground: var(--british-white);
   
-  --destructive: 0 100% 50%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: var(--british-white);
   
-  --border: 210 100% 40%;
-  --input: 210 100% 40%;
-  --ring: var(--swedish-yellow);
+  --border: var(--british-blue);
+  --input: var(--british-blue);
+  --ring: var(--british-red);
 }
 
 .dark {
   --background: 210 100% 15%;
-  --foreground: 0 0% 100%;
+  --foreground: var(--british-white);
   
   --card: 210 100% 20%;
-  --card-foreground: 0 0% 100%;
+  --card-foreground: var(--british-white);
   
-  --primary: var(--swedish-yellow);
-  --primary-foreground: 210 100% 15%;
+  --primary: var(--british-red);
+  --primary-foreground: var(--british-white);
   
-  --secondary: 210 100% 25%;
-  --secondary-foreground: 0 0% 100%;
+  --secondary: var(--british-blue);
+  --secondary-foreground: var(--british-white);
   
   --muted: 210 100% 25%;
   --muted-foreground: 0 0% 80%;
   
-  --accent: var(--swedish-yellow);
-  --accent-foreground: 210 100% 15%;
+  --accent: var(--british-red);
+  --accent-foreground: var(--british-white);
   
   --destructive: 0 100% 40%;
-  --destructive-foreground: 0 0% 100%;
+  --destructive-foreground: var(--british-white);
   
   --border: 210 100% 25%;
   --input: 210 100% 25%;
-  --ring: var(--swedish-yellow);
+  --ring: var(--british-red);
 }
 
 /* New styles for improved title contrast */
 .title {
-  @apply text-4xl font-bold mb-8 text-yellow-300 text-center bg-blue-900 py-4 rounded-lg shadow-md;
+  @apply text-4xl font-bold mb-8 text-primary text-center bg-secondary py-4 rounded-lg shadow-md;
 }

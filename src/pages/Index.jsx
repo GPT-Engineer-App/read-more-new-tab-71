@@ -16,8 +16,8 @@ const fetchStory = async (id) => {
 };
 
 const StoryItem = ({ story }) => (
-  <Card className="mb-4 hover:shadow-lg transition-shadow duration-300 bg-card text-card-foreground">
-    <CardHeader className="bg-primary/10">
+  <Card className="mb-4 hover:shadow-lg transition-shadow duration-300 bg-card text-card-foreground border-secondary">
+    <CardHeader className="bg-secondary">
       <CardTitle className="text-lg text-primary-foreground">{story.title}</CardTitle>
     </CardHeader>
     <CardContent className="pt-4">
@@ -26,7 +26,7 @@ const StoryItem = ({ story }) => (
         href={story.url}
         target="_blank"
         rel="noopener noreferrer"
-        className="text-accent hover:underline font-medium"
+        className="text-primary hover:underline font-medium"
       >
         Read more
       </a>
@@ -70,14 +70,14 @@ const Index = () => {
   return (
     <div className="container mx-auto px-4 py-8 max-w-4xl">
       <h1 className="title">
-        Swedish Hacker News Top Stories
+        British Hacker News Top Stories
       </h1>
       <Input
         type="text"
         placeholder="Search stories..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="mb-8 shadow-sm bg-input text-input-foreground"
+        className="mb-8 shadow-sm bg-input text-input-foreground border-secondary"
       />
       {isLoadingIds || isLoadingStories ? (
         Array(10).fill().map((_, index) => <SkeletonStory key={index} />)
